@@ -1,0 +1,122 @@
+/* ==========================================================================
+Root
+========================================================================== */
+:root {
+    --clr_cream:     hsl(30, 38%, 92%);
+    --clr_green:     hsl(158, 36%, 37%);
+    --clr_dark_blue: hsl(212, 21%, 14%);
+    --clr_gray_blue: hsl(228, 12%, 48%);
+}
+/* ==========================================================================
+HTML Elements
+========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font: inherit;
+}
+html {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr_cream);
+}
+body {
+    padding: 2rem;
+    color: var(--clr_gray_blue);
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+main {
+    display: grid;
+    place-content: center;
+}
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-style: normal;
+  }
+/* ==========================================================================
+Component Classes
+========================================================================== */
+.card {
+    --min_size: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    text-wrap: balance;
+    max-width: 800px;
+    overflow: hidden;
+}
+.card__section {
+    flex: 1 1 var(--min_size);
+}
+.card__section > :where(:not(:first-child)) {
+    margin-top: 1rem;
+}
+.card__category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.card__title {
+    font-family: "Fraunces";
+    color: var(--clr_dark_blue);
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+}
+.card__text {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+.card__price_display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__price_final {
+    font-family: "Fraunces";
+    color: var(--clr_green);
+    font-weight: 700;
+    font-size: 2.75rem;
+    flex: 1 1 0;
+}
+.card__price_original {
+    padding-left: 1rem;
+    text-decoration: line-through;
+    flex: 2 1 0;
+}
+.card__btn {
+    width: 100%;
+    border-radius: 12px;
+    background-color: var(--clr_green);
+    color: white;
+    border: none;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.card__btn__cart {
+    max-width: 24px;
+    max-height: 24px;
+}
+/* ==========================================================================
+Utility Classes
+========================================================================== */
+.p2 {
+    padding: 2rem;
+}
