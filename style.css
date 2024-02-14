@@ -24,7 +24,6 @@ html {
     background-color: var(--clr_cream);
 }
 body {
-    padding: 2rem;
     color: var(--clr_gray_blue);
     font-family: "Montserrat";
     font-weight: 500;
@@ -94,7 +93,7 @@ Component Classes
     text-decoration: line-through;
     flex: 2 1 0;
 }
-.card__btn {
+.btn {
     width: 100%;
     border-radius: 12px;
     background-color: var(--clr_green);
@@ -110,7 +109,7 @@ Component Classes
     justify-content: center;
     gap: 1rem;
 }
-.card__btn__cart {
+.btn__cart {
     max-width: 24px;
     max-height: 24px;
 }
